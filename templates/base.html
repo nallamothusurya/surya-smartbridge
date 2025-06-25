@@ -9,6 +9,7 @@
     <!-- CSS and Font Links -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome v6 is used, so 'fa-brands' is the correct prefix for brand icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -36,6 +37,16 @@
     </header>
 
     <main>
+        <!-- ============== START: YOUTUBE PROMO SECTION ============== -->
+        <section class="youtube-promo-section">
+            <!-- Remember to replace the href with your actual YouTube channel URL -->
+            <a href="https://www.youtube.com/@SuryanallamothuYT" class="youtube-promo-link" target="_blank" rel="noopener noreferrer" title="Subscribe to my YouTube Channel!">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Subscribe Developer Channel</span>
+            </a>
+        </section>
+        <!-- ============== END: YOUTUBE PROMO SECTION ============== -->
+
         {% block content %}{% endblock %}
     </main>
 

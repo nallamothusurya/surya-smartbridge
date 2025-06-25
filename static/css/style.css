@@ -509,3 +509,57 @@ footer {
     background-color: #e9ecef; /* Highlight row on hover */
     cursor: pointer;
 }
+
+/* Add this to your static/css/style.css file */
+
+/* Styling for the YouTube promotion banner section */
+.youtube-promo-section {
+    background: #2c2c2c; /* A dark background to make it stand out */
+    padding: 15px 20px;
+    text-align: center;
+}
+
+/* Styling for the link within the banner */
+.youtube-promo-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px; /* Space between the icon and text */
+    transition: color 0.3s ease;
+}
+
+/* Make the link text slightly dimmer until hovered */
+.youtube-promo-link span {
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+/* The YouTube icon itself */
+.youtube-promo-link .fa-youtube {
+    color: #ff0000; /* YouTube's brand red */
+    font-size: 2.2rem; /* Make the icon large and noticeable */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the entire link */
+.youtube-promo-link:hover .fa-youtube {
+    transform: scale(1.1); /* Slightly grow the icon on hover */
+}
+
+.youtube-promo-link:hover span {
+    color: #ffffff; /* Make text fully white on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .youtube-promo-link {
+        font-size: 1rem;
+    }
+
+    .youtube-promo-link .fa-youtube {
+        font-size: 2rem;
+    }
+}
