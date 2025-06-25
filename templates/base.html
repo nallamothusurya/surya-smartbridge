@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SALES - Analytics</title>
+    <!-- CSS and Font Links -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,14 +15,23 @@
     <header>
         <nav>
             <a href="{{ url_for('home') }}" class="logo">SALES</a>
+            
+            <!-- Navigation Links -->
             <ul>
                 <li><a href="{{ url_for('home') }}" class="{{ 'active' if active_page == 'home' else '' }}">Home</a></li>
                 <li><a href="{{ url_for('about') }}" class="{{ 'active' if active_page == 'about' else '' }}">About</a></li>
-                <li><a href="{{ url_for('dashboard') }}" class="{{ 'active' if active_page == 'dashboard' else '' }}">DashBoard</a></li>
+                <li><a href="{{ url_for('dashboard') }}" class="{{ 'active' if active_page == 'dashboard' else '' }}">Dashboard</a></li>
                 <li><a href="{{ url_for('story') }}" class="{{ 'active' if active_page == 'story' else '' }}">Story</a></li>
                 <li><a href="{{ url_for('contact') }}" class="{{ 'active' if active_page == 'contact' else '' }}">Contact</a></li>
+                <!-- This 'Get Started' button will appear only in the mobile nav menu -->
+                <li><a href="#" class="btn-get-started">Get Started</a></li>
             </ul>
-            <a href="#" class="btn-get-started">Get Started</a>
+
+            <!-- Mobile Menu Toggle (Hamburger Icon) -->
+            <!-- This button is only visible on mobile, as per our CSS -->
+            <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
     </header>
 
@@ -32,6 +42,27 @@
     <footer>
         <p>© 2025 Surya Nallamothu. All Rights Reserved.</p>
     </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuToggleBtn = document.getElementById('mobile-menu-toggle');
+        const body = document.querySelector('body');
+        const menuIcon = menuToggleBtn.querySelector('i');
+
+        menuToggleBtn.addEventListener('click', () => {
+            // Toggles the 'nav-open' class on the body to show/hide the menu
+            body.classList.toggle('nav-open');
+
+            // Toggles the icon between hamburger and 'X' for better UX
+            if (body.classList.contains('nav-open')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+    </script>
 
 </body>
 </html>
