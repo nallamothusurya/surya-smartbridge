@@ -1,0 +1,51 @@
+<!-- contact.html -->
+<!-- templates/contact.html -->
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-content contact-section">
+    <div class="container">
+        <h3 class="section-subtitle">CONTACT</h3>
+        <h2 class="section-title">CONTACT US</h2>
+        <div class="contact-layout">
+            <div class="contact-info">
+                <div class="info-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location:</h4>
+                        <p>Gullapadu Village, Chinthalapudi mandal, Eluru District - 534460, INDIA</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email:</h4>
+                        <p>ayyappanallamothu4@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Call:</h4>
+                        <p>9392567247</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="{{ url_for('contact') }}" method="POST">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-row">
+                        <textarea name="message" rows="6" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-send">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

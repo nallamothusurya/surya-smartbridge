@@ -1,0 +1,21 @@
+<!-- about.html -->
+<!-- templates/about.html -->
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-content about-section">
+    <div class="container two-column-layout">
+        <div class="text-content">
+            <h3 class="section-subtitle">ABOUT</h3>
+            <h2 class="section-title">The Project Involves</h2>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Data collection is the process of gathering and measuring information on variables of interest, in an established systematic fashion that enables one to answer stated research questions, test hypothesis, and evaluate outcomes and generate insights from the data.</li>
+                <li><i class="fas fa-check-circle"></i> Data preparation is the process of cleaning, transforming, and organizing data in order to make it suitable for analysis. It is an important step in the data analysis process, as the quality of the data used can have a significant impact on the accuracy and reliability of the results.</li>
+                <li><i class="fas fa-check-circle"></i> Data visualization is the process of creating graphical representations of data in order to help people understand and explore the information. The goal of data visualization is to make complex data sets more accessible, intuitive, and easier to interpret.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="{{ url_for('static', filename='images/about-img.jpg') }}" alt="Supermarket Aisle">
+        </div>
+    </div>
+</section>
+{% endblock %}
