@@ -455,3 +455,57 @@ footer {
         gap: 0.5rem;
     }
 }
+
+/* === Team Table Styles === */
+
+.team-section {
+    padding: 50px 20px; /* Adds space around the section */
+    text-align: center;
+    background-color: #f8f9fa; /* A light grey background to distinguish the section */
+}
+
+.team-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px; /* Space between title and table */
+    color: #333;
+}
+
+.team-table {
+    width: 100%;
+    max-width: 700px; /* Prevents the table from being too wide on large screens */
+    margin: 0 auto; /* Centers the table horizontally */
+    border-collapse: collapse; /* Merges cell borders */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    overflow: hidden; /* Ensures box-shadow is clipped by border-radius */
+    border-radius: 8px; /* Rounded corners for the table */
+}
+
+.team-table thead th {
+    background-color: #1e1e1e; /* A nice blue for the header */
+    color: #ffffff; /* White text for the header */
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.team-table tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #dddddd; /* A light line between rows */
+    color: #555;
+    text-align: left;
+}
+
+.team-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Zebra-striping for better readability */
+}
+
+.team-table tbody tr:last-child td {
+    border-bottom: none; /* Removes the border from the last row */
+}
+
+.team-table tbody tr:hover {
+    background-color: #e9ecef; /* Highlight row on hover */
+    cursor: pointer;
+}

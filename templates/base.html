@@ -1,5 +1,5 @@
-<!-- base.html -->
 <!-- templates/base.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +15,7 @@
     <header>
         <nav>
             <a href="{{ url_for('home') }}" class="logo">SALES</a>
-            
+
             <!-- Navigation Links -->
             <ul>
                 <li><a href="{{ url_for('home') }}" class="{{ 'active' if active_page == 'home' else '' }}">Home</a></li>
@@ -39,8 +39,40 @@
         {% block content %}{% endblock %}
     </main>
 
+    <!-- ============== START: TEAM LIST TABLE ============== -->
+    <section class="team-section">
+        <h2>Our Team</h2>
+        <table class="team-table">
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Team Leader</td>
+                    <td>Pidatala Harshita</td>
+                </tr>
+                <tr>
+                    <td>Team member / Developer</td>
+                    <td>Nallamothu Ayyappa Venkata Surya</td>
+                </tr>
+                <tr>
+                    <td>Team member</td>
+                    <td>Muthireddy Narendra</td>
+                </tr>
+                <tr>
+                    <td>Team member</td>
+                    <td>Nalla Hemanth Kumar</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- ============== END: TEAM LIST TABLE ============== -->
+
     <footer>
-        <p>© 2025 Surya Nallamothu. All Rights Reserved.</p>
+        <p>© 2025 Nallamothu Ayyappa Venkata Surya. All Rights Reserved.</p>
     </footer>
 
     <!-- JavaScript for Mobile Menu Toggle -->
